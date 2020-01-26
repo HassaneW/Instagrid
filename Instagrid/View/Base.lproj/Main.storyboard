@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -21,11 +20,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Instagrid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="QbK-qr-agu">
-                                <rect key="frame" x="129.5" y="20" width="116" height="30"/>
+                                <rect key="frame" x="242" y="20" width="116" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="cey-4S-BGU"/>
                                     <constraint firstAttribute="width" constant="116" id="ipS-rg-kec"/>
@@ -41,14 +40,14 @@
                                 </variation>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="qfM-Yu-Vbf" userLabel="Swipe Stack View">
-                                <rect key="frame" x="83.5" y="132" width="208" height="43.5"/>
+                                <rect key="frame" x="196" y="89" width="208" height="53"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Up" translatesAutoresizingMaskIntoConstraints="NO" id="AjT-Hu-ZHr">
-                                        <rect key="frame" x="97.5" y="0.0" width="13.5" height="9.5"/>
+                                        <rect key="frame" x="90.5" y="0.0" width="27" height="19"/>
                                         <variation key="heightClass=compact" image="Arrow Left"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="bKP-Ng-5Zh">
-                                        <rect key="frame" x="0.0" y="17.5" width="208" height="26"/>
+                                        <rect key="frame" x="0.0" y="27" width="208" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="208" id="0wa-Sg-axZ"/>
                                             <constraint firstAttribute="height" constant="26" id="tqa-Qh-h7J"/>
@@ -66,7 +65,7 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YBL-Hs-Ctm" userLabel="MainView">
-                                <rect key="frame" x="37.5" y="183.5" width="300" height="300"/>
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="kkq-Wq-Zb1" userLabel="Main Stack View">
                                         <rect key="frame" x="20" y="20" width="260" height="260"/>
@@ -160,10 +159,10 @@
                                 </variation>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="iBX-qD-Zvl" userLabel="Action Stack View">
-                                <rect key="frame" x="59.5" y="567" width="256" height="80"/>
+                                <rect key="frame" x="52" y="420" width="496" height="160"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dc0-B3-1lp" userLabel="buttonActionLeft">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
                                         <state key="normal" image="Layout 1"/>
                                         <state key="selected" image="Selected"/>
                                         <connections>
@@ -171,7 +170,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IkK-Xi-G0a" userLabel="buttonActionCenter">
-                                        <rect key="frame" x="88" y="0.0" width="80" height="80"/>
+                                        <rect key="frame" x="168" y="0.0" width="160" height="160"/>
                                         <state key="normal" image="Layout 2"/>
                                         <state key="selected" image="Selected"/>
                                         <connections>
@@ -179,7 +178,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2iq-n3-eCq" userLabel="buttonActionRight">
-                                        <rect key="frame" x="176" y="0.0" width="80" height="80"/>
+                                        <rect key="frame" x="336" y="0.0" width="160" height="160"/>
                                         <state key="normal" image="Layout 3"/>
                                         <state key="selected" image="Selected"/>
                                         <connections>
@@ -276,11 +275,11 @@
                         <outlet property="buttonImageTopLeft" destination="69H-7u-CAB" id="mke-5b-ccS"/>
                         <outlet property="buttonImageTopRight" destination="fPA-7Z-2CC" id="alb-tB-xPL"/>
                         <outlet property="mainView" destination="YBL-Hs-Ctm" id="omS-op-vLh"/>
-                        <outlet property="swipeToShare" destination="bKP-Ng-5Zh" id="KG2-d2-0hB"/>
-                        <outletCollection property="layoutButtons" destination="69H-7u-CAB" collectionClass="NSMutableArray" id="ywQ-Zl-JPB"/>
-                        <outletCollection property="layoutButtons" destination="fPA-7Z-2CC" collectionClass="NSMutableArray" id="82v-Sk-M2P"/>
-                        <outletCollection property="layoutButtons" destination="j8n-UQ-bhm" collectionClass="NSMutableArray" id="EZ0-Fz-JB2"/>
-                        <outletCollection property="layoutButtons" destination="2VG-JY-ydO" collectionClass="NSMutableArray" id="lc9-71-8np"/>
+                        <outlet property="swipeToShareLabel" destination="bKP-Ng-5Zh" id="KG2-d2-0hB"/>
+                        <outletCollection property="buttonImageArray" destination="69H-7u-CAB" collectionClass="NSMutableArray" id="ywQ-Zl-JPB"/>
+                        <outletCollection property="buttonImageArray" destination="fPA-7Z-2CC" collectionClass="NSMutableArray" id="82v-Sk-M2P"/>
+                        <outletCollection property="buttonImageArray" destination="j8n-UQ-bhm" collectionClass="NSMutableArray" id="EZ0-Fz-JB2"/>
+                        <outletCollection property="buttonImageArray" destination="2VG-JY-ydO" collectionClass="NSMutableArray" id="lc9-71-8np"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
