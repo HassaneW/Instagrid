@@ -103,16 +103,16 @@ class MainViewController: UIViewController {
             withDuration: 0.3,
             animations: {
                 self.mainView.transform = transform
-            },
+        },
             // Once the animation is finished share the images
             completion: { _ in
                 self.shareImage()
-            }
+        }
         )
     }
     
     //CheckImagesAreFilled
-   private func viewImageVerification() -> Bool {
+    private func viewImageVerification() -> Bool {
         var result = false
         if buttonActionLeft.isSelected {
             result = buttonTopRightTapped && buttonBottomLeftTapped && buttonBottomRightTapped
@@ -165,7 +165,7 @@ class MainViewController: UIViewController {
     
     // MARK: - Share images
     
-   private func shareImage() {
+    private func shareImage() {
         guard let imageToshare = generateImageFromMainView(input: mainView) else {
             print("can not generate image from main view")
             return
@@ -187,7 +187,7 @@ class MainViewController: UIViewController {
     }
     
     // Transform the image buttons into a single image
-   private func generateImageFromMainView(input : UIView) -> UIImage? {
+    private func generateImageFromMainView(input : UIView) -> UIImage? {
         UIGraphicsBeginImageContext(input.frame.size)
         guard let context = UIGraphicsGetCurrentContext() else { return nil }
         input.layer.render(in: context)
@@ -220,24 +220,10 @@ class MainViewController: UIViewController {
     
     // MARK: - Return to the original screen
     
-   private func resetElements() {
-        if  buttonActionLeft.isSelected {
-            resetImageButtons()
-            resetActionButtons()
-            mainView.transform = .identity
-        } else if buttonActionCenter.isSelected {
-            resetImageButtons()
-            resetActionButtons()
-            mainView.transform = .identity
-        } else if buttonActionRight.isSelected {
-            resetImageButtons()
-            resetActionButtons()
-            mainView.transform = .identity
-        } else {
-            resetImageButtons()
-            resetActionButtons()
-            mainView.transform = .identity
-        }
+    private func resetElements() {
+        resetTappedState()
+        resetImageButtons()
+        resetActionButtons()
     }
     
     private func resetImageButtons() {
@@ -249,10 +235,17 @@ class MainViewController: UIViewController {
         mainView.transform = .identity
     }
     
-   private func resetActionButtons() {
+    private func resetActionButtons() {
         buttonActionLeft.isSelected = false
         buttonActionCenter.isSelected = false
         buttonActionRight.isSelected = true
+    }
+    
+    private func resetTappedState() {
+        buttonTopLeftTapped = false
+        buttonTopRightTapped = false
+        buttonBottomLeftTapped = false
+        buttonBottomRightTapped = false
     }
 }
 
