@@ -60,6 +60,8 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Do you want a photo in the photo library ?</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Delm-Medium.otf</string>

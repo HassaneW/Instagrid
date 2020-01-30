@@ -223,9 +223,8 @@ class MainViewController: UIViewController {
     private func resetElements() {
         resetTappedState()
         resetImageButtons()
-        resetActionButtons()
+        layoutButtonTapped(buttonActionRight)
     }
-    
     private func resetImageButtons() {
         let originalImage = UIImage(named: "Plus")
         buttonImageTopLeft.setImage(originalImage, for: .normal)
@@ -234,13 +233,6 @@ class MainViewController: UIViewController {
         buttonImageBottomRight.setImage(originalImage, for: .normal)
         mainView.transform = .identity
     }
-    
-    private func resetActionButtons() {
-        buttonActionLeft.isSelected = false
-        buttonActionCenter.isSelected = false
-        buttonActionRight.isSelected = true
-    }
-    
     private func resetTappedState() {
         buttonTopLeftTapped = false
         buttonTopRightTapped = false
